@@ -1,0 +1,24 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name = "viewport" content = "width=device-width, minimum-scale=1, maximum-scale=1" />
+  <meta name = "apple-mobile-web-app-capable" content = "yes" />
+  <!--[if IE]><script src="/js/html5.js"></script><![endif]-->
+</head>
+
+<body onload="resizePage();">
+  <div class="top-streep">
+    <div class="wrapper">
+      <!-- MaxPoint logo -->
+      <div class="logo-nav">
+        <h1 id="logo">
+          <a href="">
+            <%= link_to image_tag("logo.jpg"), refinery.root_path %>
+          </a>
+        </h1>
+
+        <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+
+      </div>
+    </div>
+  </div>
